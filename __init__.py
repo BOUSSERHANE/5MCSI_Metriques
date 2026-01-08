@@ -6,9 +6,9 @@ from urllib.request import urlopen
 import sqlite3
                                                                                                                                        
 app = Flask(__name__)
-@app.route("/contact/")
+@app.route("/contact/") #a jour
 def MaPremiereAPI():
-    return "<h2>Ma page de contact</h2>"
+    return render_template("contact.html")
                                                                                                                                        
 @app.route('/')
 def hello_world(): 
@@ -34,10 +34,6 @@ def mongraphique():
 @app.route("/histogramme/")
 def monhistogramme():
     return render_template("histogramme.html")
-
-@app.route("/contact/") #a jour
-def MaPremiereAPI():
-    return render_template("contact.html")
 
 if __name__ == "__main__":
   app.run(debug=True)
