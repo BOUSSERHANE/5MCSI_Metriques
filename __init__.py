@@ -31,11 +31,10 @@ def meteo():
 def mongraphique():
     return render_template("graphique.html")
   
-
-@app.route("/Histogramme/")
+@app.route("/histogramme/")
 def monhistogramme():
-    return render_template("Histogramme.html")
-
+    return render_template("histogramme.html")
+    
 @app.route("/contact/")
 def MaPremiereAPI():
     return render_template("contact.html")
